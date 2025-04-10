@@ -1,0 +1,14 @@
+[package]
+name = "iot-driver"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+failure = { workspace = true }
+futures = { workspace = true }
+tokio = { workspace = true }
+trait-variant = { workspace = true }
+tokio-util = { workspace = true }
+async-stream = { workspace = true }
+tikv-jemallocator = { workspace = true }
+tikv-jemallocator-global = { workspace = true }

@@ -1,0 +1,13 @@
+[package]
+name = "iot-driver-modbus"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio-modbus = { workspace = true }
+failure = { workspace = true }
+iot-driver = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+iot-dds = { workspace = true }
+bb8 = { workspace = true }

@@ -1,0 +1,12 @@
+[package]
+name = "iot-tcp-connpool"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iot-driver = { workspace = true }
+tokio = { workspace = true }
+trait-variant = { workspace = true }
+bb8 = { workspace = true }
+tokio-modbus = { workspace = true }
+futures = { workspace = true }

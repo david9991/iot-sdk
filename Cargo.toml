@@ -1,0 +1,39 @@
+[package]
+name = "iot-sdk"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "iot-driver",
+    "iot-dds",
+    "iot-bridge",
+    "iot-driver-modbus",
+    "iot-tcp-connpool",
+    "iot-graphql",
+    "iot-motion",
+]
+
+[workspace.dependencies]
+iot-dds = { path = "iot-dds" }
+iot-driver = { path = "iot-driver" }
+iot-bridge = { path = "iot-bridge" }
+iot-driver-modbus = { path = "iot-driver-modbus" }
+iot-tcp-connpool = { path = "iot-tcp-connpool" }
+iot-graphql = { path = "iot-graphql" }
+tokio = { version = "1.35.1", features = ["full"] }
+tokio-util = "0.7.12"
+bb8 = "0.8.6"
+failure = "0.1.8"
+tokio-modbus = { version = "0.14.0", default-features = false, features = [
+    "tcp",
+    "tcp-sync",
+    "tcp-server",
+] }
+trait-variant = "0.1.2"
+async-stream = "0.3.3"
+dust_dds = { git = "https://github.com/david9991/dust-dds", branch = "workaround" }
+dust_dds_derive = { git = "https://github.com/david9991/dust-dds", branch = "workaround" }
+futures = "0.3.31"
+tikv-jemallocator = { version = "0.6.0" }
+tikv-jemallocator-global = "0.6.0"
